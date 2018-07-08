@@ -9,7 +9,7 @@ RUN apt-get install -y libyaml-libyaml-perl libtemplate-perl \
                   libfile-copy-recursive-perl git libgtk2.0-dev curl wget \
                   runc git
 RUN adduser --disabled-password --gecos 'build,,,,' build
-RUN git clone git@github.com:eyedeekay/i2p-browser-build /home/build/i2p-browser-build
+COPY i2p-browser-build /home/build/i2p-browser-build
 RUN chown -R build:build /home/build/i2p-browser-build
 USER build
 WORKDIR /home/build/i2p-browser-build

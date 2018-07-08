@@ -1,4 +1,6 @@
 
+pr: configure pull run
+
 build:
 	docker build -t eyedeekay/i2p-browser-build .
 
@@ -6,7 +8,11 @@ br: configure build run
 
 configure: update config
 
+pull:
+	docker pull eyedeekay/i2p-browser-build
+
 update:
+	cd i2p-browser-build || git clone https://github.com/eyedeekay/i2p-browser-build
 	cd i2p-browser-build && git pull --force
 
 config:
