@@ -1,0 +1,3 @@
+[submodule "i2p-browser-build"]
+	path = i2p-browser-build
+	url = https://github.com/eyedeekay/i2p-browser-build
