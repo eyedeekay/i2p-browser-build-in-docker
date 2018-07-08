@@ -17,7 +17,6 @@ RUN ./rbm/rbm fetch argparse
 RUN ./rbm/rbm fetch binutils
 RUN ./rbm/rbm fetch cctools
 RUN ./rbm/rbm fetch cmake
-RUN ./rbm/rbm fetch common
 RUN ./rbm/rbm fetch container-image
 RUN ./rbm/rbm fetch debootstrap-image
 RUN ./rbm/rbm fetch depot_tools
