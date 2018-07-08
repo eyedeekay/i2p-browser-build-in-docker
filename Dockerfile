@@ -13,7 +13,6 @@ COPY i2p-browser-build /home/build/i2p-browser-build
 RUN chown -R build:build /home/build/i2p-browser-build
 USER build
 WORKDIR /home/build/i2p-browser-build
-RUN make submodule-update
 RUN ./rbm/rbm fetch argparse
 RUN ./rbm/rbm fetch binutils
 RUN ./rbm/rbm fetch cctools
@@ -69,4 +68,5 @@ RUN ./rbm/rbm fetch webrtc
 RUN ./rbm/rbm fetch winpython
 RUN ./rbm/rbm fetch zlib
 RUN ./rbm/rbm fetch zope.interface
+RUN make submodule-update
 CMD make nightly-linux-x86_64
