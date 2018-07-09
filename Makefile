@@ -22,7 +22,7 @@ run: clean
 	docker run -t -i \
 		--name i2p-browser-build \
 		--volume i2p-browser-build:/home/build/i2p-browser-build/ \
-		eyedeekay/i2p-browser-build
+		eyedeekay/i2p-browser-build-in-docker
 
 clean:
 	docker rm -f i2p-browser-build; true
