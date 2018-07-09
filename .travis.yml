@@ -1,0 +1,12 @@
+
+sudo: required
+
+language: c
+
+services: docker
+
+before-install:
+    docker build -t eyedeekay/i2p-browser-build
+
+script:
+    make run

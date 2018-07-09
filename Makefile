@@ -1,10 +1,10 @@
 
+br: configure build run
+
 pr: configure pull run
 
 build:
 	docker build -t eyedeekay/i2p-browser-build .
-
-br: configure build run
 
 configure: update config
 
@@ -13,7 +13,7 @@ pull:
 
 update:
 	cd i2p-browser-build || git clone https://github.com/eyedeekay/i2p-browser-build
-	cd i2p-browser-build && git pull --force
+	cd i2p-browser-build && git pull --force origin master
 
 config:
 	cp i2p-browser-build/rbm.local.conf.i2p i2p-browser-build/rbm.local.conf
