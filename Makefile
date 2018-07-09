@@ -4,7 +4,7 @@ br: configure build run
 pr: configure pull run
 
 build: deps
-	docker build -t eyedeekay/i2p-browser-build .
+	docker build -t eyedeekay/i2p-browser-build-in-docker .
 
 configure: update config
 
