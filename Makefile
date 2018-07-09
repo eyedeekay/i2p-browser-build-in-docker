@@ -1,5 +1,5 @@
 
-user=root
+user=build
 
 br: configure build run
 
