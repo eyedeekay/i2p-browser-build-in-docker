@@ -3,7 +3,7 @@ br: configure build run
 
 pr: configure pull run
 
-build:
+build: deps
 	docker build -t eyedeekay/i2p-browser-build .
 
 configure: update config
@@ -26,3 +26,8 @@ run: clean
 
 clean:
 	docker rm -f i2p-browser-build; true
+
+deps:
+	docker build -f Dockerfile.tbb-build-deps -t eyedeekay/tbb-deb-deps .
+	docker build -f Dockerfile.rbm-subs -t eyedeekay/tbb-build-deps .
+	docker push eyedeekay/tbb-deb-deps eyedeekay/tbb-build-deps

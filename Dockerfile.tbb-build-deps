@@ -1,0 +1,12 @@
+FROM debian:stable
+RUN apt-get update
+RUN apt-get dist-upgrade -y
+RUN apt-get install -y libyaml-libyaml-perl libtemplate-perl \
+                  libio-handle-util-perl libio-all-perl \
+                  libio-captureoutput-perl libpath-tiny-perl \
+                  libstring-shellquote-perl libsort-versions-perl \
+                  libdigest-sha-perl libdata-uuid-perl libdata-dump-perl \
+                  libfile-copy-recursive-perl git libgtk2.0-dev curl wget \
+                  runc git sudo
+RUN adduser --disabled-password --gecos 'build,,,,' build
+RUN addgroup build sudo

@@ -1,0 +1,8 @@
+FROM eyedeekay/tbb-deb-deps
+COPY Makefile Dockerfile /home/build/
+RUN chown -R build:build /home/build/
+USER build
+WORKDIR /home/build/
+RUN make configure
+WORKDIR /home/build/i2p-browser-build
+RUN make submodule-update
