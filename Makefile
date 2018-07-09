@@ -22,7 +22,7 @@ config:
 
 run: clean
 	docker run -t -i \
-		--user "$(user)"
+		--user "$(user)" \
 		--name i2p-browser-build \
 		--volume i2p-browser-build:/home/build/i2p-browser-build/ \
 		eyedeekay/i2p-browser-build-in-docker
