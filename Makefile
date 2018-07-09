@@ -9,7 +9,7 @@ build: deps
 configure: update config
 
 pull:
-	docker pull eyedeekay/i2p-browser-build
+	docker pull eyedeekay/i2p-browser-build-in-docker
 
 update:
 	cd i2p-browser-build || git clone https://github.com/eyedeekay/i2p-browser-build
