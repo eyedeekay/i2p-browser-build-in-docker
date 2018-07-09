@@ -30,4 +30,5 @@ clean:
 deps:
 	docker build -f Dockerfile.tbb-build-deps -t eyedeekay/tbb-deb-deps .
 	docker build -f Dockerfile.rbm-subs -t eyedeekay/tbb-build-deps .
-	docker push eyedeekay/tbb-deb-deps eyedeekay/tbb-build-deps
+	docker push eyedeekay/tbb-deb-deps; true
+	docker push eyedeekay/tbb-build-deps; true
