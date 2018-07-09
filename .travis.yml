@@ -9,4 +9,4 @@ before-install:
     docker build -t eyedeekay/i2p-browser-build
 
 script:
-    make br
+    make pr
