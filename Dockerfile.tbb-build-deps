@@ -11,4 +11,4 @@ RUN apt-get install -y libyaml-libyaml-perl libtemplate-perl \
 RUN adduser --disabled-password --gecos 'build,,,,' build
 RUN addgroup build sudo
 RUN echo "build   ALL=NOPASSWD: ALL" | EDITOR='tee -a' visudo
-CMD sudo build cat /etc/sudoers
+CMD sudo cat /etc/sudoers

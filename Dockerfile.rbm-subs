@@ -2,6 +2,7 @@ FROM eyedeekay/tbb-deb-deps
 COPY Makefile Dockerfile /home/build/
 RUN chown -R build:build /home/build/
 USER build
+RUN sudo cat /etc/sudoers
 WORKDIR /home/build/
 RUN make configure
 WORKDIR /home/build/i2p-browser-build
