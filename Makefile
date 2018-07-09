@@ -23,6 +23,7 @@ config:
 run: clean
 	docker run -t -i \
 		--cap-add SYS_RESOURCE \
+		--cap-add SYS_ADMIN \
 		--user "$(user)" \
 		--name i2p-browser-build \
 		--volume i2p-browser-build:/home/build/i2p-browser-build/ \
