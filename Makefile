@@ -28,7 +28,6 @@ run: clean
 		--cap-add DAC_READ_SEARCH \
 		--user "$(user)" \
 		--name i2p-browser-build \
-		--volume i2p-browser-build:/home/build/i2p-browser-build/ \
 		eyedeekay/i2p-browser-build-in-docker
 
 clean:
